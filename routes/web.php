@@ -14,3 +14,18 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/saludo/{name}', function ($name) {
+    echo "Hola ".$name;
+});
+
+Route::get('/suma/{num1}/{num2}/{num3?}', function ($num1, $num2, $num3=0) {
+    echo $num1 + $num2 + $num3;
+})->where(['num1', '[0-9]+'],['num2', '[0-9]+'],['num3', '[0-9]+']);
+
+Route::post('/suma/', function ($request) {
+
+})
