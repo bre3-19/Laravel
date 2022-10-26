@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('clients', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
 
             $table->string('name');
             $table->string('phone_number')->nullable();

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Room;
+use App\Models\Reservation;
 
-class RoomController extends Controller
+class ReservationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class RoomController extends Controller
      */
     public function index()
     {
-        return Room::all();
+        return Reservation::all();
     }
 
     /**
@@ -46,7 +46,7 @@ class RoomController extends Controller
      */
     public function show($id)
     {
-        return Room::find($id);
+        return Reservation::find($id);
     }
 
     /**
