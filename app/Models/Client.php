@@ -20,6 +20,11 @@ class Client extends Model
         'phone_number',
     ];
 
+    public function reservations() 
+    {
+        return $this->hasMany(reservation::class); 
+    }
+
     /**
      * The attributes that should be cast.
      *

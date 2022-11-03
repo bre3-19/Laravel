@@ -14,7 +14,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = Client::with('laravel')->get();
+        $clients = Client::with('reservations')->get();
         return view('clients.show', compact('clients'));
     }
 
@@ -61,7 +61,7 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        return Client::find($id);
+        return Client::with('reservations')->find($id);
     }
 
     /**
@@ -72,7 +72,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        $client = Client::with('laravel')->find($id);
+        $client = Client::with('reservations')->find($id);
         return view('clients.show', compact('client'));
     }
 

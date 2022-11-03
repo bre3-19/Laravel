@@ -16,4 +16,9 @@ class Reservation extends Model
         'room_id',
         'cost_per_night'
     ];
+
+    public function reservations()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }
