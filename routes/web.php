@@ -53,6 +53,10 @@ Route::get('clients/{id}', [ ClientController::class , 'show' ]);
 
 Route::post('clients/', [ ClientController::class, 'store' ]);
 
+Route::get('clients/edit/{id}', [ ClientController::class, 'edit' ]);
+
+Route::put('clients/', [ ClientController::class, 'update' ]);
+
 Route::get('rooms/', [ RoomController::class, 'index' ]);
 
 Route::get('rooms/{id}', [ RoomController::class , 'show' ]);
