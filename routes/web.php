@@ -23,6 +23,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/prueba', function () {
+    return "Hola";
+})->middleware('auth');
+
 /*
 Route::get('/saludo/{name}', function ($name) {
     echo "Hola ".$name;
